@@ -1,0 +1,221 @@
+# 🎓 Sistema de Gestión de Estudiantes
+
+¡Bienvenido! 👋 Este proyecto es un **programa de gestión de estudiantes desarrollado en Python 🐍**, creado con el objetivo de practicar conceptos fundamentales de programación, especialmente el uso de **diccionarios, listas, funciones, ciclos y estructuras condicionales**.
+
+El programa permite registrar estudiantes, consultar su información, calcular promedios y eliminar registros de una manera sencilla mediante un menú interactivo. 📚💻
+
+---
+
+## 🚀 Funcionalidades
+
+El sistema cuenta con las siguientes opciones:
+
+### ➕ 1. Agregar estudiante
+
+Permite registrar un nuevo estudiante proporcionando:
+
+* 🆔 ID único
+* 👤 Nombre
+* 🎂 Edad
+* 📝 Tres calificaciones
+
+El programa verifica que el ID no esté registrado previamente para evitar estudiantes duplicados.
+
+---
+
+### 📋 2. Mostrar estudiantes
+
+Muestra todos los estudiantes registrados junto con:
+
+* 🆔 ID
+* 👤 Nombre
+* 🎂 Edad
+* 📊 Calificaciones
+
+Esto permite consultar rápidamente la información almacenada.
+
+---
+
+### 📈 3. Calcular promedio
+
+Permite introducir el ID de un estudiante y calcular automáticamente el promedio de sus tres calificaciones.
+
+Ejemplo:
+
+```text
+Promedio: 87.5
+```
+
+🧮 El cálculo se realiza utilizando la suma de las calificaciones dividida entre la cantidad de notas.
+
+---
+
+### 🗑️ 4. Eliminar estudiante
+
+Permite eliminar un estudiante utilizando su ID.
+
+Si el ID existe, el registro se elimina correctamente. Si no existe, el programa muestra un mensaje indicando que no se encontró el estudiante.
+
+---
+
+### 🚪 5. Salir
+
+Finaliza la ejecución del programa.
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+* 🐍 **Python 3**
+* 📦 Diccionarios
+* 📋 Listas
+* 🔧 Funciones
+* 🔄 Ciclos `for` y `while`
+* 🔀 Condicionales `if / elif / else`
+* ⌨️ Entrada de datos mediante `input()`
+
+---
+
+## 🧠 Estructura de los datos
+
+La información de los estudiantes se almacena en un diccionario llamado `estudiantes`.
+
+Cada estudiante utiliza su ID como clave y contiene información como:
+
+```python
+{
+    "nombre": "Juan",
+    "edad": 20,
+    "calificaciones": [85, 90, 95]
+}
+```
+
+Esto permite organizar la información de manera sencilla y acceder rápidamente a los datos de cada estudiante. 🔍
+
+---
+
+## ▶️ Cómo ejecutar el programa
+
+### 1️⃣ Verificar que Python esté instalado
+
+Puedes comprobarlo desde una terminal con:
+
+```bash
+python --version
+```
+
+o:
+
+```bash
+python3 --version
+```
+
+### 2️⃣ Ejecutar el programa
+
+Ubícate en la carpeta donde se encuentra el archivo y ejecuta:
+
+```bash
+python trabajo5.py
+```
+
+---
+
+## 🖥️ Menú principal
+
+Al iniciar el programa aparecerá un menú similar al siguiente:
+
+```text
+1. Agregar
+2. Mostrar
+3. Promedio
+4. Eliminar
+5. Salir
+
+Opción:
+```
+
+El usuario puede seleccionar la operación que desea realizar introduciendo el número correspondiente. 🎯
+
+---
+
+## 📌 Ejemplo de uso
+
+```text
+1. Agregar
+2. Mostrar
+3. Promedio
+4. Eliminar
+5. Salir
+
+Opción: 1
+
+ID: 001
+Nombre: Carlos
+Edad: 20
+Calificación 1: 85
+Calificación 2: 90
+Calificación 3: 95
+```
+
+Posteriormente, al seleccionar la opción de promedio:
+
+```text
+Opción: 3
+ID: 001
+
+Promedio: 90.0
+```
+
+---
+
+## 🎯 Objetivo del proyecto
+
+Este ejercicio tiene como finalidad reforzar el aprendizaje de:
+
+> 💡 **Estructuras de datos y programación básica en Python.**
+
+A través del proyecto se practican operaciones de creación, consulta, modificación y eliminación de información utilizando estructuras básicas del lenguaje.
+
+---
+
+## 📚 Conceptos practicados
+
+| Concepto                  | Uso en el proyecto                 |
+| ------------------------- | ---------------------------------- |
+| 🗂️ Diccionarios          | Almacenar estudiantes              |
+| 📋 Listas                 | Guardar calificaciones             |
+| 🔧 Funciones              | Separar las diferentes operaciones |
+| 🔄 `while`                | Mantener el menú activo            |
+| 🔁 `for`                  | Registrar las calificaciones       |
+| 🔀 Condicionales          | Controlar las opciones             |
+| ⌨️ `input()`              | Recibir información del usuario    |
+| ➗ Operaciones matemáticas | Calcular promedios                 |
+
+---
+
+## 👨‍💻 Autor
+
+**Proyecto académico — Trabajo 5**
+
+🐍 Desarrollado en Python como práctica de programación y manejo de estructuras de datos.
+
+---
+
+## ⭐ Conclusión
+
+Este proyecto representa una implementación sencilla pero funcional de un **sistema de gestión de estudiantes**, utilizando únicamente herramientas básicas de Python.
+
+Es una buena base para posteriormente agregar funcionalidades como:
+
+* 🔎 Buscar estudiantes
+* ✏️ Modificar información
+* 🏆 Mostrar al estudiante con mejor promedio
+* 📊 Mostrar estadísticas generales
+* 💾 Guardar información en archivos
+* 🖥️ Crear una interfaz gráfica
+
+---
+
+### 🚀 ¡Gracias por revisar el proyecto!
+
+**Python 🐍 + Práctica 📚 + Programación 💻 = Aprendizaje 🚀**
