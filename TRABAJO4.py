@@ -1,4 +1,3 @@
-
 print("Hola, este es mi proyecto con Git")
 def sumar(a, b):
     return a + b
