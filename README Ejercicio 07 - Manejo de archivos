@@ -1,0 +1,354 @@
+# 📂 Ejercicio 07 - Manejo de archivos
+
+## 📚 Descripción
+
+En este ejercicio se practica el **manejo de archivos de texto en Python**. 🐍
+
+El objetivo es aprender a:
+
+* 📖 Abrir y leer archivos.
+* ✍️ Escribir información en archivos.
+* ➕ Agregar nuevos datos a un archivo existente.
+* 🧮 Calcular un promedio de calificaciones.
+* 📄 Generar un archivo de reporte.
+* 🛡️ Manejar errores utilizando `try-except`.
+
+---
+
+## 🎯 Objetivo
+
+Crear un programa que trabaje con una lista de estudiantes y sus calificaciones.
+
+El programa debe:
+
+1. 📂 Leer el archivo `estudiantes.txt`.
+2. 🧮 Calcular el promedio general de las calificaciones.
+3. 📄 Crear un archivo llamado `reporte.txt`.
+4. 📝 Copiar el contenido original al reporte.
+5. ➗ Agregar al final el promedio general.
+6. 👤 Permitir al usuario agregar nuevos estudiantes.
+7. ⚠️ Controlar errores de archivos y formatos incorrectos.
+
+---
+
+## 📁 Archivos del proyecto
+
+El ejercicio utiliza los siguientes archivos:
+
+```text
+📦 Ejercicio07
+ ├── 🐍 EJERCICIO07.py
+ ├── 📄 estudiantes.txt
+ ├── 📄 reporte.txt
+ └── 📖 README.md
+```
+
+### 🐍 `EJERCICIO07.py`
+
+Es el programa principal.
+
+Se encarga de leer los estudiantes, calcular el promedio, generar el reporte y permitir agregar nuevos estudiantes.
+
+### 📄 `estudiantes.txt`
+
+Contiene los nombres de los estudiantes y sus calificaciones.
+
+Ejemplo:
+
+```text
+Ana,90
+Jorge,75
+Laura,85
+```
+
+Cada estudiante se encuentra en una línea y los datos están separados por una coma. ✏️
+
+### 📄 `reporte.txt`
+
+Este archivo contiene el contenido original de `estudiantes.txt` y al final agrega el promedio general.
+
+Ejemplo:
+
+```text
+Ana,90
+Jorge,75
+Laura,85
+Promedio general: 83.3
+```
+
+---
+
+## ⚙️ Funcionamiento del programa
+
+### 1️⃣ Leer el archivo
+
+El programa abre `estudiantes.txt` utilizando:
+
+```python
+open("estudiantes.txt", "r", encoding="utf-8")
+```
+
+Después utiliza `readlines()` para obtener las líneas del archivo. 📖
+
+### 2️⃣ Procesar los datos
+
+Cada línea se separa utilizando una coma:
+
+```python
+partes = linea.split(",")
+```
+
+De esta manera se obtiene:
+
+* 👤 Nombre del estudiante.
+* 🔢 Calificación.
+
+Por ejemplo:
+
+```text
+Ana,90
+```
+
+se convierte en:
+
+```text
+Nombre: Ana
+Calificación: 90
+```
+
+### 3️⃣ Calcular el promedio 🧮
+
+El programa suma todas las calificaciones y divide el resultado entre la cantidad de estudiantes.
+
+Con los datos:
+
+```text
+Ana,90
+Jorge,75
+Laura,85
+```
+
+el cálculo es:
+
+```text
+(90 + 75 + 85) / 3 = 83.3
+```
+
+Por lo tanto:
+
+```text
+Promedio general: 83.3
+```
+
+### 4️⃣ Generar el reporte 📄
+
+El programa crea `reporte.txt` utilizando el modo de escritura:
+
+```python
+open("reporte.txt", "w", encoding="utf-8")
+```
+
+El archivo contiene los datos originales y el promedio general al final.
+
+### 5️⃣ Agregar nuevos estudiantes ➕
+
+El usuario puede decidir si quiere agregar un nuevo estudiante.
+
+El programa solicita:
+
+```text
+¿Deseas agregar un nuevo estudiante? (s/n):
+```
+
+Si el usuario responde `s`, solicita:
+
+```text
+Nombre del estudiante:
+Calificación:
+```
+
+Y agrega los datos a `estudiantes.txt`.
+
+Por ejemplo:
+
+```text
+Pedro,95
+```
+
+---
+
+## ▶️ Ejecución
+
+Para ejecutar el programa desde la terminal:
+
+```bash
+python3 EJERCICIO07.py
+```
+
+El programa mostrará el promedio y preguntará si se desea agregar un nuevo estudiante.
+
+Ejemplo:
+
+```text
+Reporte generado correctamente.
+Promedio general: 83.3
+
+¿Deseas agregar un nuevo estudiante? (s/n): s
+Nombre del estudiante: Pedro
+Calificación: 95
+
+Estudiante agregado correctamente.
+```
+
+---
+
+## 🛡️ Manejo de errores
+
+El programa utiliza `try-except` para evitar que errores inesperados detengan la ejecución. ⚠️
+
+### 📂 Archivo inexistente
+
+Si `estudiantes.txt` no existe:
+
+```text
+Error: No se encontró el archivo estudiantes.txt.
+```
+
+### ❌ Formato incorrecto
+
+Si una línea no tiene el formato esperado:
+
+```text
+Nombre,calificación
+```
+
+el programa informa del error.
+
+Por ejemplo:
+
+```text
+Ana,90,extra
+```
+
+sería considerado un formato incorrecto.
+
+### 🔢 Calificación inválida
+
+Si se introduce una calificación que no es numérica:
+
+```text
+Ana,abc
+```
+
+el programa controla el error mediante `try-except`.
+
+---
+
+## 🧠 Conceptos de Python utilizados
+
+Durante este ejercicio se practican diferentes conceptos:
+
+* 🐍 Python.
+* 📂 `open()`.
+* 📖 `read()`.
+* 📖 `readlines()`.
+* ✍️ `write()`.
+* ➕ Modo `"a"` para agregar información.
+* 📝 Modo `"w"` para escribir archivos.
+* 🔤 `split()`.
+* ✂️ `strip()`.
+* 🔄 Bucles `for`.
+* 🔀 Condicionales `if`.
+* ⌨️ `input()`.
+* 🔢 Conversión con `float()`.
+* 🧮 Cálculos matemáticos.
+* 🛡️ `try-except`.
+* ⚠️ `FileNotFoundError`.
+* ⚠️ `ValueError`.
+
+---
+
+## 📌 Modos de apertura de archivos
+
+En este ejercicio se utilizan diferentes modos:
+
+| Modo  | 📚 Función                          |
+| ----- | ----------------------------------- |
+| `"r"` | 📖 Leer el archivo                  |
+| `"w"` | ✍️ Escribir/reemplazar el contenido |
+| `"a"` | ➕ Agregar información al final      |
+
+---
+
+## 🧪 Ejemplo completo
+
+### 📄 `estudiantes.txt`
+
+```text
+Ana,90
+Jorge,75
+Laura,85
+```
+
+### ▶️ Ejecutar
+
+```bash
+python3 EJERCICIO07.py
+```
+
+### 💻 Resultado
+
+```text
+Reporte generado correctamente.
+Promedio general: 83.3
+
+¿Deseas agregar un nuevo estudiante? (s/n): s
+Nombre del estudiante: Pedro
+Calificación: 95
+Estudiante agregado correctamente.
+```
+
+### 📄 Archivo actualizado
+
+```text
+Ana,90
+Jorge,75
+Laura,85
+Pedro,95
+```
+
+---
+
+## 🎓 Lo aprendido
+
+Con este ejercicio se aprende a trabajar con archivos de texto desde Python y a procesar información almacenada en ellos. 🐍📂
+
+También se practica cómo:
+
+✅ Leer información.
+✅ Procesar datos.
+✅ Calcular valores.
+✅ Crear archivos nuevos.
+✅ Modificar archivos existentes.
+✅ Recibir información del usuario.
+✅ Controlar errores.
+
+---
+
+## 🚀 Conclusión
+
+El **Ejercicio 07 - Manejo de archivos** permite practicar una parte fundamental de Python: trabajar con información almacenada en archivos.
+
+A través de este programa se combinan **lectura, escritura, modificación de archivos, procesamiento de datos y manejo de errores**. 💻🐍
+
+---
+
+### 👨‍💻 Ejercicio 07
+
+📂 **Manejo de archivos**
+🐍 **Python**
+📖 **Leer y escribir archivos**
+🧮 **Cálculo de promedios**
+🛡️ **Manejo de errores**
+
+✨ **¡Ejercicio completado!** 🎉
