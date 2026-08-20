@@ -1,0 +1,210 @@
+# 🐍 Ejercicio 08 — Argumentos en Python
+
+> 🎓 **Proyecto académico de programación | 3er parcial**
+
+---
+
+## 📌 Descripción
+
+Este proyecto corresponde al **Ejercicio 08: Argumentos**, cuyo objetivo es practicar el uso de **argumentos desde la terminal** en programas desarrollados con Python.
+
+El programa recibe como argumento la cantidad de números que se desean generar y posteriormente muestra esa cantidad de números aleatorios en pantalla.
+
+De esta manera, el usuario puede indicar directamente desde la terminal cuántos números desea obtener, sin necesidad de utilizar `input()`.
+
+---
+
+## 🎯 Objetivo
+
+El objetivo principal es aprender a:
+
+* 🖥️ Ejecutar programas de Python desde la terminal.
+* 📥 Recibir argumentos mediante `sys.argv`.
+* 🔢 Convertir argumentos de texto a números.
+* 🎲 Generar números aleatorios.
+* 🔄 Utilizar ciclos para repetir una acción determinada cantidad de veces.
+
+---
+
+## ⚙️ Funcionamiento
+
+El programa se ejecuta utilizando la siguiente estructura:
+
+```bash
+python programa8.py 5
+```
+
+El número `5` representa la **cantidad de números aleatorios** que el programa debe generar.
+
+Por ejemplo:
+
+```text
+22 32 1 23 44
+```
+
+Cada ejecución puede generar números diferentes debido al uso de valores aleatorios. 🎲
+
+---
+
+## 🧠 Uso de argumentos
+
+El programa utiliza el módulo `sys` de Python para acceder a los argumentos enviados desde la terminal.
+
+Por ejemplo:
+
+```python
+import sys
+
+cantidad = int(sys.argv[1])
+```
+
+Si se ejecuta:
+
+```bash
+python programa8.py 10
+```
+
+El valor:
+
+```text
+10
+```
+
+se recibe mediante:
+
+```python
+sys.argv[1]
+```
+
+Posteriormente se convierte a un número entero utilizando `int()`.
+
+---
+
+## 🎲 Generación de números
+
+Para generar los números aleatorios se utiliza el módulo `random`.
+
+Ejemplo:
+
+```python
+import random
+
+numero = random.randint(1, 50)
+```
+
+Esto genera un número aleatorio entre **1 y 50**.
+
+El programa repite este proceso según la cantidad indicada por el usuario.
+
+---
+
+## ▶️ Ejecución
+
+### 1️⃣ Abrir la terminal
+
+Primero se debe acceder a la carpeta donde se encuentra el archivo:
+
+```bash
+cd ruta/del/proyecto
+```
+
+### 2️⃣ Ejecutar el programa
+
+Por ejemplo, para generar 5 números:
+
+```bash
+python programa8.py 5
+```
+
+Para generar 10 números:
+
+```bash
+python programa8.py 10
+```
+
+Para generar 20 números:
+
+```bash
+python programa8.py 20
+```
+
+---
+
+## 💻 Ejemplo
+
+### Entrada
+
+```bash
+python programa8.py 5
+```
+
+### Salida
+
+```text
+22 32 1 23 44
+```
+
+> ⚠️ Los números pueden cambiar cada vez que se ejecuta el programa porque son generados aleatoriamente.
+
+---
+
+## 📂 Estructura del proyecto
+
+```text
+📁 Ejercicio-08-Argumentos/
+│
+├── 🐍 programa8.py
+└── 📖 README.md
+```
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+* 🐍 **Python 3**
+* 🎲 Módulo `random`
+* 🖥️ Terminal
+* 📦 Módulo `sys`
+* 🔄 Ciclos `for`
+* 🔢 Conversión de datos con `int()`
+
+---
+
+## 📚 Conceptos aprendidos
+
+Con este ejercicio se practican conceptos importantes de Python:
+
+| Concepto                   | Uso                                                  |
+| -------------------------- | ---------------------------------------------------- |
+| 🖥️ Argumentos de terminal | Permiten enviar datos al programa al ejecutarlo.     |
+| 📦 `sys.argv`              | Permite acceder a los argumentos recibidos.          |
+| 🎲 `random`                | Permite generar números aleatorios.                  |
+| 🔄 `for`                   | Permite repetir la generación de números.            |
+| 🔢 `int()`                 | Convierte el argumento recibido en un número entero. |
+
+---
+
+## 🚀 Posibles mejoras
+
+En futuras versiones se podrían agregar:
+
+* 🔢 Definir el rango de números desde la terminal.
+* ⚠️ Validar que el usuario introduzca un número válido.
+* 📊 Calcular el promedio de los números generados.
+* 📈 Mostrar el número mayor y menor.
+* 🔁 Permitir diferentes tipos de generación aleatoria.
+
+---
+
+## 👨‍💻 Autor
+
+**Estudiante de Programación** 🎓
+
+📚 **Ejercicio 08 — Argumentos**
+🐍 Desarrollado con Python
+
+---
+
+⭐ **Proyecto realizado como práctica de programación y uso de argumentos desde la terminal.**
+
+> 💡 *La programación se aprende practicando, ejecutando y experimentando.* 🚀
