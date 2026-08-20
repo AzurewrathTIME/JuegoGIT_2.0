@@ -1,0 +1,227 @@
+# 🐍 Sistema de Operaciones y Herramientas en Python
+
+> 📚 **Proyecto académico de programación desarrollado en Python**
+
+---
+
+## 📌 Descripción
+
+Este proyecto consiste en un programa desarrollado en **Python 🐍** que integra diferentes funcionalidades mediante el uso de **módulos y funciones**.
+
+El programa cuenta con un menú principal que permite al usuario seleccionar diferentes opciones para realizar operaciones matemáticas, trabajar con texto y utilizar herramientas adicionales.
+
+El objetivo principal es aplicar conceptos fundamentales de programación de una manera **organizada, modular y fácil de comprender**. 💻
+
+---
+
+## 🚀 Funcionalidades
+
+### 🧮 1. Operaciones matemáticas
+
+Permite ingresar dos números y realizar las siguientes operaciones:
+
+* ➕ Suma
+* ➖ Resta
+* ✖️ Multiplicación
+* ➗ División
+
+Estas funciones se encuentran dentro del módulo:
+
+```text
+operaciones.py
+```
+
+---
+
+### 📝 2. Herramientas de texto
+
+Permite ingresar un texto y realizar diferentes acciones:
+
+* 🔢 Contar la cantidad de caracteres.
+* 🔠 Convertir el texto a mayúsculas.
+* 🔡 Convertir el texto a minúsculas.
+
+Estas funciones se encuentran dentro del módulo:
+
+```text
+texto.py
+```
+
+---
+
+### 🛠️ 3. Utilidades
+
+Esta sección contiene herramientas adicionales para trabajar con números:
+
+* 🔢 Comprobar si un número es **par o impar**.
+* 📊 Mostrar la **tabla de multiplicar** del número ingresado.
+
+Estas funciones se encuentran dentro del módulo:
+
+```text
+utilidades.py
+```
+
+---
+
+### 🚪 4. Salir
+
+Permite finalizar correctamente la ejecución del programa y mostrar un mensaje de despedida. 👋
+
+---
+
+## 📂 Estructura del proyecto
+
+```text
+📁 proyecto/
+│
+├── 🐍 main.py
+├── 🧮 operaciones.py
+├── 📝 texto.py
+├── 🛠️ utilidades.py
+└── 📖 README.md
+```
+
+### 📄 Descripción de los archivos
+
+| Archivo             | Función                                                                       |
+| ------------------- | ----------------------------------------------------------------------------- |
+| 🐍 `main.py`        | Contiene el menú principal y controla la interacción con el usuario.          |
+| 🧮 `operaciones.py` | Contiene las funciones de operaciones matemáticas.                            |
+| 📝 `texto.py`       | Contiene las funciones para trabajar con cadenas de texto.                    |
+| 🛠️ `utilidades.py` | Contiene funciones adicionales como comprobar números pares y mostrar tablas. |
+| 📖 `README.md`      | Contiene la documentación del proyecto.                                       |
+
+---
+
+## 💻 Tecnologías utilizadas
+
+* 🐍 **Python 3**
+* 📦 Módulos propios
+* ⚙️ Funciones
+* 🔀 Estructuras condicionales
+* 🔄 Ciclo `while`
+* ⌨️ Entrada de datos con `input()`
+* 🔢 Conversión de tipos con `int()` y `float()`
+
+---
+
+## 📋 Requisitos
+
+Para ejecutar este proyecto solamente es necesario contar con:
+
+* 🐍 **Python 3.x**
+* 💻 Un editor de código o terminal.
+
+No se requieren librerías externas, ya que el proyecto utiliza funcionalidades estándar de Python y módulos creados específicamente para el programa.
+
+---
+
+## ▶️ Ejecución
+
+### 1️⃣ Descargar el proyecto
+
+Descarga o clona el repositorio en tu computadora.
+
+### 2️⃣ Abrir la carpeta
+
+Abre una terminal dentro de la carpeta donde se encuentra el proyecto.
+
+### 3️⃣ Ejecutar el programa
+
+Utiliza el siguiente comando:
+
+```bash
+python main.py
+```
+
+### 4️⃣ Seleccionar una opción
+
+El programa mostrará un menú similar al siguiente:
+
+```text
+╔══════════════════════════════════╗
+║       🐍 MENÚ PRINCIPAL          ║
+╠══════════════════════════════════╣
+║ 1. 🧮 Operaciones matemáticas   ║
+║ 2. 📝 Herramientas de texto     ║
+║ 3. 🛠️ Utilidades                ║
+║ 4. 🚪 Salir                     ║
+╚══════════════════════════════════╝
+```
+
+El usuario deberá ingresar el número de la opción que desea utilizar.
+
+---
+
+## 💡 Ejemplo de funcionamiento
+
+```text
+===== MENÚ PRINCIPAL =====
+1. Operaciones matemáticas
+2. Herramientas de texto
+3. Utilidades
+4. Salir
+
+Seleccione una opción: 1
+
+--- Operaciones matemáticas ---
+
+Ingrese el primer número: 10
+Ingrese el segundo número: 5
+
+Suma: 15
+Resta: 5
+Multiplicación: 50
+División: 2.0
+```
+
+---
+
+## 🧠 Conceptos de programación aplicados
+
+Durante el desarrollo del proyecto se aplicaron diferentes conceptos fundamentales:
+
+* 📦 **Modularización:** separación del programa en diferentes archivos.
+* 🔧 **Funciones:** reutilización de código mediante funciones.
+* 🔀 **Condicionales:** toma de decisiones utilizando `if`, `elif` y `else`.
+* 🔄 **Ciclos:** utilización de `while` para mantener activo el menú.
+* ⌨️ **Entrada de datos:** interacción con el usuario mediante `input()`.
+* 🔢 **Tipos de datos:** uso de `int`, `float` y `str`.
+* 🔗 **Importación de módulos:** utilización de `import` para acceder a funciones externas.
+
+---
+
+## 🎯 Objetivo del proyecto
+
+El objetivo de este proyecto es demostrar los conocimientos adquiridos en **programación con Python**, especialmente en el uso de funciones, módulos, estructuras de control y entrada de datos.
+
+La organización del programa en diferentes módulos permite mantener un código más **limpio, ordenado, reutilizable y fácil de mantener**. ✨
+
+---
+
+## 📈 Posibles mejoras futuras
+
+El proyecto puede continuar desarrollándose agregando nuevas funcionalidades, por ejemplo:
+
+* 🧮 Más operaciones matemáticas.
+* 🔢 Cálculo de números pares, impares y primos.
+* 📝 Contador de palabras.
+* 🔍 Búsqueda de palabras dentro de un texto.
+* ⚠️ Manejo de errores para evitar entradas incorrectas.
+* 🎨 Una interfaz gráfica.
+* 💾 Guardado de resultados.
+
+---
+
+## 👨‍💻 Autor
+
+**Estudiante de Programación** 🎓
+
+Proyecto académico desarrollado utilizando **Python 🐍**.
+
+---
+
+⭐ **Gracias por revisar este proyecto.**
+
+> 💻 *"La práctica constante es una parte fundamental del aprendizaje de la programación."* 🚀
