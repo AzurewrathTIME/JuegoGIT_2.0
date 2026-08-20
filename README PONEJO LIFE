@@ -1,0 +1,388 @@
+# 🐇 PONEJO LIFE 🌿
+
+## 📚 Descripción
+
+**PONEJO LIFE** es una simulación de vida de conejos desarrollada en **Python** 🐍.
+
+El programa crea un mundo formado por pasto 🌿 y conejos 🐇 y simula diferentes generaciones automáticamente. En cada generación, los conejos pueden sobrevivir, reproducirse o morir dependiendo de la cantidad de conejos que tengan alrededor.
+
+La simulación se muestra directamente en la terminal y se actualiza automáticamente cada cierto tiempo. 💻
+
+---
+
+## 🎯 Objetivo
+
+El objetivo del proyecto es practicar conceptos de programación como:
+
+* 🐍 Programación en Python.
+* 🔄 Bucles y generaciones.
+* 📦 Listas y diccionarios.
+* 🔢 Variables y constantes.
+* 🧩 Funciones.
+* 🎲 Uso de números aleatorios.
+* 🖥️ Manipulación de la terminal.
+* ⏱️ Control del tiempo.
+* 🌎 Simulación de un mundo virtual.
+* 🐇 Reproducción y supervivencia de una población.
+
+---
+
+## 📜 Reglas de la simulación
+
+El mundo funciona siguiendo diferentes reglas:
+
+### 🐇 Reproducción
+
+* Dos conejos juntos pueden reproducirse.
+* Una pareja puede tener entre **1 y 5 hijos**.
+* Los hijos crecen en una generación.
+
+### 🌿 Alimentación
+
+* Los conejos necesitan pasto para sobrevivir.
+* Si no encuentran suficiente comida, pueden morir.
+
+### 👴 Muerte por edad
+
+* Los conejos viejos mueren después de alcanzar determinada edad.
+
+### 🐇🐇 Sobrepoblación
+
+* Si hay demasiados conejos juntos, algunos pueden morir.
+* Esto evita que la población crezca indefinidamente.
+
+### 🔄 Generaciones
+
+En cada generación se revisa el estado de todas las posiciones del mundo y se crea una nueva generación.
+
+---
+
+## 🌎 El mundo
+
+El mundo tiene un tamaño de:
+
+```text
+ANCHO = 80
+ALTO = 30
+```
+
+Esto crea una cuadrícula de:
+
+```text
+80 x 30
+```
+
+Cada posición del mundo puede contener:
+
+* 🐇 Un conejo.
+* 🌿 Pasto.
+
+El mundo comienza completamente cubierto de pasto y se colocan parejas iniciales de conejos en diferentes posiciones. 🐇🐇
+
+---
+
+## 🐇 Representación visual
+
+Los elementos se representan en la terminal mediante emojis:
+
+```text
+🐇🐇 = Conejo
+🌿🌿🌿 = Pasto
+```
+
+La pantalla se actualiza constantemente para mostrar la evolución de la población.
+
+Un ejemplo de la pantalla puede verse así:
+
+```text
+🐇 PONEJO LIFE | Generación: 15
+🐇 Población: 24
+================================================================
+
+🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿
+🌿🌿🌿🐇🐇🌿🌿🌿🌿🌿🌿🌿🌿
+🌿🌿🌿🌿🌿🌿🐇🐇🌿🌿🌿🌿
+🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🐇🌿
+🌿🌿🌿🌿🐇🐇🌿🌿🌿🌿🌿🌿
+
+```
+
+La población y la generación aparecen en la parte superior. 📊
+
+---
+
+## ⚙️ Funcionamiento
+
+El programa está dividido en varias funciones principales.
+
+### 🏗️ `crear_mundo()`
+
+Crea el mundo inicial.
+
+Cada posición se guarda como un diccionario:
+
+```python
+{
+    "tipo": "pasto",
+    "edad": 0
+}
+```
+
+Después se colocan las parejas iniciales de conejos.
+
+---
+
+### 🔍 `vecinos(mundo, x, y)`
+
+Comprueba cuántos conejos existen alrededor de una posición determinada.
+
+Esta información se utiliza para determinar qué ocurre con cada celda en la siguiente generación.
+
+---
+
+### 🔄 `siguiente_generacion(mundo)`
+
+Genera un nuevo estado del mundo.
+
+Para cada posición se comprueba:
+
+* 🐇 Si hay un conejo.
+* 🌿 Si hay pasto.
+* 🔍 Cuántos vecinos tiene.
+* ❤️ Si puede sobrevivir.
+* 🐣 Si puede reproducirse.
+* ☠️ Si debe morir.
+
+Después se crea un nuevo mundo para la siguiente generación.
+
+---
+
+### 🖥️ `mostrar(mundo, generacion)`
+
+Muestra la simulación en la terminal.
+
+Primero limpia la pantalla:
+
+```python
+os.system("cls" if os.name=="nt" else "clear")
+```
+
+Después calcula la población actual y muestra el mundo utilizando emojis.
+
+También muestra:
+
+```text
+🐇 PONEJO LIFE | Generación: X
+🐇 Población: X
+```
+
+---
+
+## ⏱️ Velocidad
+
+La simulación utiliza:
+
+```python
+VELOCIDAD = 0.2
+```
+
+Esto significa que existe una pausa de **0.2 segundos** entre generaciones.
+
+La pausa se realiza mediante:
+
+```python
+time.sleep(VELOCIDAD)
+```
+
+---
+
+## ▶️ Cómo ejecutar el programa
+
+Primero hay que tener Python instalado. 🐍
+
+Desde la terminal, situándose en la carpeta donde está el programa, ejecutar:
+
+```bash
+python3 EJERCICIO.py
+```
+
+📌 Si el archivo tiene otro nombre, sustituye `EJERCICIO.py` por el nombre correspondiente.
+
+---
+
+## 🛑 Cómo detener la simulación
+
+La simulación se ejecuta continuamente mediante:
+
+```python
+while True:
+```
+
+Para detenerla:
+
+### ⌨️ Presiona:
+
+```text
+Ctrl + C
+```
+
+Esto detendrá la ejecución del programa en la terminal.
+
+---
+
+## 🧠 Conceptos utilizados
+
+Este proyecto utiliza diferentes conceptos de Python:
+
+* 🐍 Python.
+* 📦 Listas.
+* 📚 Diccionarios.
+* 🔄 Bucles `for`.
+* ♾️ Bucle `while`.
+* 🔀 Condicionales `if`.
+* 🧩 Funciones.
+* 🔢 Variables.
+* 📐 Constantes.
+* 🖥️ `os.system()`.
+* ⏱️ `time.sleep()`.
+* 🎲 `random`.
+* 🌎 Coordenadas `x` e `y`.
+* 🔁 Simulación por generaciones.
+* 📊 Contador de población.
+
+---
+
+## 🗺️ Estructura del mundo
+
+El mundo utiliza coordenadas:
+
+```text
+        X →
+    0   1   2   3   4
+  ┌───┬───┬───┬───┬───┐
+Y │ 🌿│ 🌿│ 🐇│ 🌿│ 🌿│
+↓ ├───┼───┼───┼───┼───┤
+  │ 🌿│ 🐇│ 🌿│ 🌿│ 🌿│
+  ├───┼───┼───┼───┼───┤
+  │ 🌿│ 🌿│ 🌿│ 🐇│ 🌿│
+  └───┴───┴───┴───┴───┘
+```
+
+Cada celda contiene información sobre su tipo y edad.
+
+---
+
+## 🔄 Ciclo de la simulación
+
+El programa sigue este ciclo continuamente:
+
+```text
+🌎 Crear mundo
+      ↓
+👀 Mostrar mundo
+      ↓
+🔍 Revisar vecinos
+      ↓
+🐇 Comprobar supervivencia
+      ↓
+🐣 Comprobar reproducción
+      ↓
+☠️ Comprobar muertes
+      ↓
+🔄 Crear siguiente generación
+      ↓
+⏱️ Esperar 0.2 segundos
+      ↓
+👀 Mostrar nueva generación
+      ↓
+        🔁
+```
+
+---
+
+## 📊 Población
+
+En cada generación se calcula el número de conejos existentes.
+
+Por ejemplo:
+
+```text
+🐇 PONEJO LIFE | Generación: 25
+🐇 Población: 37
+```
+
+Esto permite observar cómo cambia la población a lo largo del tiempo. 📈📉
+
+La población puede:
+
+* 📈 Aumentar cuando nacen nuevos conejos.
+* 📉 Disminuir cuando mueren.
+* ⚖️ Mantenerse relativamente estable.
+* 💀 Llegar a desaparecer.
+
+---
+
+## 🎮 Interacción
+
+La simulación funciona automáticamente, por lo que no es necesario introducir datos durante su ejecución.
+
+El único control disponible es:
+
+```text
+Ctrl + C
+```
+
+para detener el programa. 🛑
+
+---
+
+## 🚀 Posibles mejoras
+
+El proyecto puede ampliarse en el futuro con nuevas características:
+
+* 🌱 Regeneración del pasto.
+* 🍎 Diferentes tipos de comida.
+* 🐺 Depredadores.
+* 💧 Agua.
+* 🌧️ Clima.
+* 🏠 Refugios.
+* ❤️ Diferentes estados de salud.
+* 🧬 Diferentes características genéticas.
+* 📊 Estadísticas de nacimientos y muertes.
+* 📈 Gráficas de población.
+* 🎨 Más elementos visuales.
+* 🎮 Controles para pausar o acelerar la simulación.
+
+---
+
+## 📁 Estructura del proyecto
+
+```text
+📦 PONEJO LIFE
+ ├── 🐍 programa.py
+ └── 📖 README.md
+```
+
+---
+
+## 🏆 Conclusión
+
+**PONEJO LIFE** es una pequeña simulación de ecosistema creada en Python. 🐇🌿
+
+El proyecto permite observar cómo una población puede cambiar generación tras generación utilizando reglas de supervivencia, reproducción y muerte.
+
+Además, sirve para practicar estructuras fundamentales de Python como **funciones, listas, diccionarios, bucles, condicionales y manipulación de la terminal**. 🐍💻
+
+---
+
+# 🐇🌿 ¡Bienvenido a PONEJO LIFE! 🌿🐇
+
+### 🔄 Generación tras generación...
+
+### 🐣 Algunos nacen...
+
+### 🌿 Algunos sobreviven...
+
+### ☠️ Algunos mueren...
+
+**¡Presiona `Ctrl + C` cuando quieras salir!** 🛑
