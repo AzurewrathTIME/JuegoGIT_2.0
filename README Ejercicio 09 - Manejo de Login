@@ -1,0 +1,135 @@
+# 🔐 Ejercicio 09 - Manejo de Login
+
+## 📚 Descripción
+
+En este ejercicio se practica el manejo de **archivos de texto en Python**, el uso de **argumentos desde la línea de comandos**, la ejecución de otros programas mediante `subprocess` y el manejo de errores con `try-except`.
+
+El ejercicio consiste en crear un programa de Login que recibe una contraseña como argumento y un segundo programa que lee una lista de contraseñas desde un archivo de texto y las prueba una por una. 🐍
+
+## 📂 Archivos del proyecto
+
+El ejercicio está compuesto por los siguientes archivos:
+
+* 🐍 `programa9-1.py` — Programa de Login.
+* 🐍 `programa9-2.py` — Lee las contraseñas y ejecuta el programa de Login.
+* 📄 `contraseñas.txt` — Contiene una lista de contraseñas.
+
+## 🔑 1. programa9-1.py
+
+Este programa recibe una contraseña mediante argumentos de la línea de comandos utilizando `sys.argv`.
+
+La contraseña correcta utilizada para esta práctica es:
+
+```text
+holamundo
+```
+
+✅ Si la contraseña es correcta, muestra:
+
+```text
+Login exitoso.
+```
+
+❌ Si la contraseña es incorrecta, muestra:
+
+```text
+Contraseña incorrecta.
+```
+
+## 📄 2. contraseñas.txt
+
+El archivo contiene diferentes contraseñas, una por cada línea:
+
+```text
+password
+123456
+holamundo
+```
+
+## ⚙️ 3. programa9-2.py
+
+Este programa se encarga de:
+
+1. 📂 Abrir el archivo `contraseñas.txt`.
+2. 📖 Leer todas las contraseñas.
+3. 🔄 Recorrer cada contraseña.
+4. 🚀 Ejecutar `programa9-1.py` utilizando `subprocess`.
+5. 📤 Enviar cada contraseña como argumento.
+6. 🔍 Comprobar la respuesta del programa.
+7. 🎉 Detenerse cuando encuentra el Login exitoso.
+
+## ▶️ Ejecución
+
+Para ejecutar el ejercicio desde la terminal:
+
+```bash
+python3 programa9-2.py
+```
+
+### 💻 Resultado esperado
+
+```text
+Probando contraseña: password
+Contraseña incorrecta.
+
+Probando contraseña: 123456
+Contraseña incorrecta.
+
+Probando contraseña: holamundo
+Login exitoso.
+
+¡Contraseña encontrada!
+La contraseña correcta es: holamundo
+```
+
+## 🧠 Conceptos utilizados
+
+Durante este ejercicio se practican:
+
+* 📂 Lectura de archivos con `open()`.
+* 📖 Lectura de líneas con `readlines()`.
+* ✂️ Uso de `strip()`.
+* ⌨️ Argumentos de línea de comandos con `sys.argv`.
+* 🚀 Ejecución de programas con `subprocess.run()`.
+* 📤 Captura de la salida con `stdout`.
+* 🔀 Condicionales `if`.
+* 🔄 Bucles `for`.
+* 🛡️ Manejo de errores con `try-except`.
+* ⚠️ Excepciones como `FileNotFoundError` e `IndexError`.
+
+## 🛡️ Manejo de errores
+
+El programa utiliza `try-except` para controlar posibles errores.
+
+Por ejemplo:
+
+* ❌ Si no existe `contraseñas.txt`.
+* ❌ Si no se proporciona una contraseña como argumento.
+* ⚠️ Si ocurre otro error durante la ejecución.
+
+De esta forma, el programa puede mostrar un mensaje informativo en lugar de terminar inesperadamente.
+
+## 🎯 Objetivo del ejercicio
+
+El objetivo principal es aprender a:
+
+📁 **Leer archivos de texto**
+⌨️ **Utilizar argumentos**
+🐍 **Ejecutar programas de Python desde otro programa**
+🔗 **Comunicar programas mediante argumentos**
+🛡️ **Manejar errores con `try-except`**
+
+## 📁 Estructura del proyecto
+
+```text
+📦 Ejercicio09
+ ├── 🐍 programa9-1.py
+ ├── 🐍 programa9-2.py
+ ├── 📄 contraseñas.txt
+ └── 📖 README.md
+```
+
+---
+
+✨ **Ejercicio 09 - Manejo de Login**
+🐍 Práctica de Python sobre archivos, argumentos, `subprocess` y manejo de errores.
